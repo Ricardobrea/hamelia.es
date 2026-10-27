@@ -1,0 +1,48 @@
+/* Root selector only. Existing background, logo and internal pages remain unchanged. */
+.selector-motion{position:relative;padding:100px 24px 32px}
+.selector-motion main{width:100%;max-width:none}
+.selector-controls{position:absolute;top:22px;right:24px;display:flex;align-items:center;gap:12px;z-index:10}
+.selector-controls .language summary{font-size:.85rem;gap:9px;list-style:none}
+.selector-controls .language summary::-webkit-details-marker{display:none}
+.selector-controls .language nav{position:absolute;right:0;top:100%;display:block;min-width:210px;margin:5px 0 0;padding:10px;background:#fffbf7;border:1px solid #dfcbc4;border-radius:12px}
+.selector-controls .language nav a{display:block;border:0;border-radius:6px;background:transparent;padding:10px 12px;font-size:.92rem;text-align:start}
+.selector-controls .language nav a:hover{background:#fbe5db}
+.motion-toggle{border:0;background:transparent;color:#705d60;font:inherit;font-size:1rem;min-width:44px;min-height:44px;cursor:pointer;border-radius:50%}
+.motion-toggle[hidden]{display:none}
+/* Freely licensed fonts served from this site, without third-party requests. */
+@font-face{font-family:HameliaCaveat;src:url('fonts/caveat.ttf') format('truetype');font-weight:400 700;font-display:swap}
+@font-face{font-family:HameliaQuicksand;src:url('fonts/quicksand.ttf') format('truetype');font-weight:300 700;font-display:swap}
+@font-face{font-family:HameliaCormorant;src:url('fonts/cormorant.ttf') format('truetype');font-weight:300 700;font-display:swap}
+@font-face{font-family:HameliaNaskh;src:url('fonts/noto-naskh-arabic.ttf') format('truetype');font-weight:400 700;font-display:swap}
+.phrase-stage{position:relative;width:100%;height:286px;margin-top:30px;isolation:isolate;overflow:hidden;background:transparent;border:0;box-shadow:none}
+.selector-motion .phrase{position:absolute;left:0;right:auto;top:17%;width:max-content;max-width:none;margin:0;padding:0 10px;font-family:HameliaCaveat,cursive;font-size:96px;line-height:1.65;font-weight:500;color:#875363;white-space:nowrap;letter-spacing:0;opacity:1;will-change:transform}
+.selector-motion .phrase[lang="en"]{top:25%;font-family:HameliaQuicksand,sans-serif;font-size:80px;font-weight:400;line-height:1.45;color:#76616d;letter-spacing:-.025em}
+.selector-motion .phrase[lang="pt-BR"]{top:11%;font-family:HameliaCormorant,serif;font-size:91px;font-weight:500;line-height:1.5;color:#963d51}
+.selector-motion .phrase[dir="rtl"]{top:13%;font-family:HameliaNaskh,serif;font-size:88px;font-weight:500;line-height:1.85;letter-spacing:0;color:#795664;direction:rtl}
+.selector-motion .fine{margin-top:25px;margin-inline:auto}
+@media(max-width:760px){
+ .selector-motion .phrase{font-size:52px;top:22%}
+ .selector-motion .phrase[lang="en"]{font-size:38px;top:29%}
+ .selector-motion .phrase[lang="pt-BR"]{font-size:47px;top:20%}
+ .selector-motion .phrase[dir="rtl"]{font-size:46px;top:18%}
+}
+@media(max-width:370px){.selector-motion{padding-inline:20px}.selector-controls{top:14px;right:20px}}
+@media(prefers-reduced-motion:reduce){
+ .selector-motion .phrase{position:absolute;left:0;width:100%;max-width:100%;white-space:normal;text-align:center;transform:none!important;will-change:auto;font-size:clamp(34px,6vw,80px)}
+ .selector-motion .phrase[lang="en"],.selector-motion .phrase[lang="pt-BR"],.selector-motion .phrase[dir="rtl"]{font-size:clamp(31px,5.6vw,76px)}
+}
+
+/* V5: two safe horizontal bands; one intact, shaped text node per label. */
+.selector-motion .phrase{font-size:84px;line-height:1.35;visibility:hidden;will-change:transform,opacity}
+.selector-motion .phrase[lang="en"]{font-size:70px;line-height:1.4}
+.selector-motion .phrase[lang="pt-BR"]{font-size:82px;line-height:1.4}
+.selector-motion .phrase[dir="rtl"]{font-size:69px;line-height:1.65}
+@media(max-width:760px){
+ .selector-motion .phrase{font-size:52px}
+ .selector-motion .phrase[lang="en"]{font-size:39px}
+ .selector-motion .phrase[lang="pt-BR"]{font-size:49px}
+ .selector-motion .phrase[dir="rtl"]{font-size:46px}
+}
+@media(prefers-reduced-motion:reduce){
+ .selector-motion .phrase,.selector-motion .phrase[lang="en"],.selector-motion .phrase[lang="pt-BR"],.selector-motion .phrase[dir="rtl"]{width:100%;max-width:100%;white-space:normal;font-size:clamp(25px,4.5vw,54px);line-height:1.4;opacity:1;will-change:auto}
+}
