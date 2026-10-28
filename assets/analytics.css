@@ -1,0 +1,14 @@
+/* Scoped privacy controls; existing site and animation styles are unchanged. */
+.hamelia-privacy-entry{border:0;background:transparent;color:inherit;font:inherit;font-size:.82rem;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px 0;min-height:44px}
+.selector .hamelia-privacy-entry{position:absolute;bottom:8px;inset-inline-start:24px;font-size:.72rem}
+.hamelia-privacy-dialog{position:fixed;inset:0;margin:auto;width:min(620px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;border:1px solid #dfcbc4;border-radius:18px;background:#fffbf7;color:#50383f;padding:24px;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;text-align:start;z-index:100}
+.hamelia-privacy-dialog::backdrop{background:#50383f45}
+.hamelia-privacy-dialog h2{font:500 1.5rem/1.4 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;letter-spacing:0;margin:0 0 14px;max-width:none}
+.hamelia-privacy-dialog p{margin:0 0 14px;color:#50383f;font-size:.94rem}
+.hamelia-privacy-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-block:16px}
+.hamelia-privacy-actions button{font:600 .94rem/1.4 system-ui,sans-serif;background:#633c49;color:white;border:1px solid #633c49;border-radius:22px;min-height:48px;padding:10px 16px;cursor:pointer}
+.hamelia-privacy-actions button:disabled{opacity:.5;cursor:not-allowed}
+.hamelia-privacy-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hamelia-privacy-close{font:inherit;border:1px solid #dfcbc4;border-radius:18px;padding:8px 16px;background:transparent;color:#50383f;cursor:pointer;min-height:44px}
+.hamelia-privacy-note{font-size:.8rem!important}
+@media(max-width:400px){.hamelia-privacy-dialog{padding:18px}.hamelia-privacy-actions{grid-template-columns:1fr}.selector .hamelia-privacy-entry{inset-inline-start:20px}}

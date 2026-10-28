@@ -32,3 +32,5 @@
 !/assets/*.png
 !/assets/*.ico
 !/assets/*.svg
+
+!/assets/analytics.js
